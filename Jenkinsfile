@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Git-java') {
+        stage('Git') {
             steps {
-              git branch: 'main', url: 'https://github.com/Kamalesh-Devi/docker.git'
+                git branch: 'main', url: 'https://github.com/Kamalesh-Devi/docker.git'
             }
         }
-         stage('Docker build and run') {
+        stage('build and run') {
             steps {
-              sh '''docker build -t myimg .
-                    docker run myimg'''
+                sh '''docker build -t jimgg .
+                    docker run jimgg'''
             }
         }
         
